@@ -4,23 +4,77 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+
+const Jumbotron = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container bg-light.bg-gradient">
+			<div className="jumbotron">
+				<h1 className="display-4">A Warm Welcome!</h1>
+				<p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla tortor eget elit elementum, tempus sollicitudin purus semper. Vivamus vitae massa nec enim finibus rutrum. Sed lobortis odio diam, quis mollis ipsum convallis eget.</p>
+				<p className="lead">
+					<a className="btn btn-primary btn-lg" href="#" role="button">Call to action!</a>
+				</p>
+			</div>
 		</div>
 	);
 };
 
-export default Home;
+const NavBar = () => {
+	return (
+		<nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark text-light">
+			<div className="container">
+				<a className="navbar-brand text-light" href="#">Start Bootstrap</a>
+				<div className="nav">
+					<a className="nav-link text-light active" aria-current="page" href="#">Home</a>
+					<a className="nav-link text-secondary" href="#">About</a>
+					<a className="nav-link text-secondary" href="#">Services</a>
+					<a className="nav-link text-secondary" href="#">Contact</a>
+				</div>
+			</div>
+		</nav>
+	);
+};
+
+const Card = () => {
+	return (
+		<div className="card" style={{ width: '18rem' }}>
+			<img src="https://placehold.co/500x325" alt="Placeholder" className="card-img-top" />
+ 			<div className="card-body">
+    			<h5 className="card-title">Card title</h5>
+    			<p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla tortor eget elit elementum, tempus sollicitudin purus semper.</p>
+    			<a href="#" className="btn btn-primary">Find Out More!</a>
+  			</div>
+		</div>
+	);
+};
+
+const Home = () => {
+	return (
+		<div className="container">
+			<div className="row">
+				<div className="col-md-3">
+					<Card />
+				</div>
+				<div className="col-md-3">
+					<Card />
+				</div>
+				<div className="col-md-3">
+					<Card />
+				</div>
+				<div className="col-md-3">
+					<Card />
+				</div>
+			</div>
+		</div>
+	);
+};
+
+const Footer = () => {
+	return (
+		<nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark text-light justify-content-center">
+			<p className="lead mb-0 text-center">Copyright © Your Website 2024</p>
+		</nav>
+	);
+};
+//export default Home;
+export { NavBar, Jumbotron, Home, Footer };
